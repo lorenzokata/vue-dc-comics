@@ -1,21 +1,21 @@
 <template>
   <div id="app">
     <Header/>
-    <ItemsGallery/>
+    <BookGallery/>
     <BlueNav/>
   </div>
 </template>
 
 <script>
   import Header from './components/Header.vue'
-  import ItemsGallery from './components/ItemsGallery.vue'
+  import BookGallery from './components/BookGallery.vue'
   import BlueNav from './components/BlueNav.vue'
 
   export default {
     name: 'App',
     components: {
       Header,
-      ItemsGallery,
+      BookGallery,
       BlueNav
     }
   }
@@ -23,7 +23,7 @@
 
 <style lang="scss">
 
-  @import 'style/commons.scss';
+  @import '@/style/commons.scss';
 
   #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;

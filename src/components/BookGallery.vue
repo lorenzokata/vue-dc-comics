@@ -1,0 +1,53 @@
+<template>
+
+  <section id="book-gallery">
+    <div class="container">
+      <div class="contents">
+        <BookCard v-for="(book, index) in books" :key="index" :book="book"/>
+      </div>
+    </div>
+  </section>
+
+</template>
+
+
+<script>
+
+import ComicBooks from '../data/ComicBooks.js';
+import BookCard from '../components/BookCard.vue';
+
+export default {
+  name: 'BookGallery',
+  components: {
+    BookCard
+  },
+  data() {
+    return {
+      books: ComicBooks
+    }
+  },
+}
+
+</script>
+
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped lang="scss">
+
+@import '@/style/commons.scss';
+
+section{
+  background-color: black;
+  padding: 40px 0;
+
+  .contents{
+    color: white;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+</style>
