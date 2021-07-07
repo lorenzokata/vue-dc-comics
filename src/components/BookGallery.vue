@@ -5,6 +5,7 @@
       <div class="contents">
         <BookCard v-for="(book, index) in books" :key="index" :book="book"/>
       </div>
+      <button>Load More</button>
     </div>
   </section>
 
@@ -47,6 +48,17 @@ section{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  button{
+    text-align: center;
+    padding: 5px 30px;
+    background-color: #0282F9;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    font-weight: 900;
   }
 }
 
